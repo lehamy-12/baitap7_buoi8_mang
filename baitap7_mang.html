@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("Nhap phan tu bat ki"));
+        let arr = [ 14,1,5, 4, 6, 12,7, 45,0 ]
+        document.write("a. ");
+        for( let i =0; i< arr.length ; i++){
+            document.write(arr[i], ", ")
+        }
+        
+        let arrDao = arr.slice().reverse();
+        document.write("<br> b. ",arrDao);
+        
+        let arrIncrease = arr.slice().sort((a,b) => a - b);
+        document.write("<br> c. ", arrIncrease);
+        
+        let s = 0;
+        for( let i =0;i<arr.length;i++){
+            if(arr[i] % 2 === 0){
+                s = s + arr[i];
+            }
+        }
+        
+        document.write("<br> d. Tong cac so chan la:",+ s,"<br>");
+       document.write("e. ")
+        let ViTri = arr.indexOf(a);
+        if (ViTri === -1){
+            document.write("Phan tu khong ton tai trong mang");
+        }
+        else{
+            let b = ViTri + 1;
+            document.write("Phan tu ton tai o vi tri: " + b) ;
+        }
+    </script>
+</body>
+</html>
